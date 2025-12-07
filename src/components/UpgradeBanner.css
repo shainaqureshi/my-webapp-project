@@ -1,0 +1,136 @@
+.upgrade-banner {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe9a6 100%);
+  border-bottom: 3px solid #ffc107;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.upgrade-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upgrade-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.upgrade-text {
+  flex: 1;
+}
+
+.upgrade-text strong {
+  color: #856404;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.upgrade-text p {
+  color: #856404;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.upgrade-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.upgrade-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.upgrade-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dismiss-btn {
+  background: transparent;
+  border: none;
+  color: #856404;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.dismiss-btn:hover {
+  background: rgba(133, 100, 4, 0.1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .upgrade-banner {
+    padding: 0.75rem;
+  }
+
+  .upgrade-content {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .upgrade-icon {
+    font-size: 1.25rem;
+  }
+
+  .upgrade-text {
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  .upgrade-text strong {
+    font-size: 0.95rem;
+  }
+
+  .upgrade-text p {
+    font-size: 0.85rem;
+  }
+
+  .upgrade-btn {
+    order: 2;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .dismiss-btn {
+    order: 3;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
