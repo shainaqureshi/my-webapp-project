@@ -1,0 +1,41 @@
+.ad-container {
+  margin: 2rem auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-placeholder {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 728px;
+}
+
+.ad-placeholder p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.ad-note {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive ad styling */
+@media (max-width: 768px) {
+  .ad-container {
+    margin: 1rem auto;
+  }
+  
+  .ad-placeholder {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
