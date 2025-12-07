@@ -1,13 +1,13 @@
 // Firebase configuration
-// Replace these values with your Firebase project credentials
+// Uses environment variables for security - API keys stored in .env file
 // Get them from: https://console.firebase.google.com/ > Project Settings > General
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBW9nJLvsoepyoA7XtBWTtP_9o-4-ZPDVI",
-  authDomain: "mywebapp-sq.firebaseapp.com",
-  projectId: "mywebapp-sq",
-  storageBucket: "mywebapp-sq.firebasestorage.app",
-  messagingSenderId: "716498603716",
-  appId: "1:716498603716:web:83e9629bbfe00ba79dc391",
-  measurementId: "G-1VDR49PGHL"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
